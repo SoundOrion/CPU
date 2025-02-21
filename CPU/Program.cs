@@ -76,11 +76,8 @@ await Parallel.ForEachAsync(Enumerable.Range(0, 1000),
 //        await _semaphore.WaitAsync();
 //        try
 //        {
-//            await Task.Run(() =>
-//            {
-//                Console.WriteLine($"スレッド {Thread.CurrentThread.ManagedThreadId} で {i} を処理");
-//                Thread.Sleep(1000);
-//            });
+//            await Task.Delay(1000); // 実際の処理に置き換え
+//            Console.WriteLine($"スレッド {Thread.CurrentThread.ManagedThreadId} で {i} を処理");
 //        }
 //        finally
 //        {
@@ -90,3 +87,4 @@ await Parallel.ForEachAsync(Enumerable.Range(0, 1000),
 
 //    await Task.WhenAll(tasks);
 //}
+
